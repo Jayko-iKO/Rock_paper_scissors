@@ -1,0 +1,124 @@
+/* Reset & font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f1a;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1 1 280px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.sidebar h1 {
+    font-size: 1.6rem;
+    color: #fffb;
+    margin-bottom: 10px;
+}
+
+.sidebar .sub {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.controls button {
+    flex: 1 1 48%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7c3aed, #06b6d4);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.controls button:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.controls button:active {
+    transform: scale(0.97);
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) inset;
+}
+
+/* Arena */
+.arena-wrap {
+    flex: 3 1 700px;
+    position: relative;
+    background: radial-gradient(circle at 30% 30%, rgba(124, 58, 237, 0.15), transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(6, 182, 212, 0.1), transparent 50%);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+}
+
+/* Responsive */
+@media(max-width:900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .controls button {
+        flex: 1 1 48%;
+    }
+}

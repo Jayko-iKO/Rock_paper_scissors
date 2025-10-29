@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock • Paper • Scissors Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>Rock • Paper • Scissors Simulator</h1>
+      <p class="sub">Choose arena shape and watch items collide and convert!</p>
+      <div class="controls">
+        <button data-shape="rectangle">Rectangle</button>
+        <button data-shape="square">Square</button>
+        <button data-shape="circle">Circle</button>
+        <button data-shape="triangle">Triangle</button>
+      </div>
+      <div class="stats">
+        <div>Rock: <strong id="countRock">10</strong></div>
+        <div>Paper: <strong id="countPaper">10</strong></div>
+        <div>Scissors: <strong id="countScissors">10</strong></div>
+      </div>
+      <div class="timer">Time: <strong id="timer">0.0</strong>s</div>
+    </div>
+    <div class="arena-wrap">
+      <canvas id="board" width="1200" height="800"></canvas>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
